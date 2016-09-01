@@ -41,9 +41,11 @@ class UserController extends Controller
     }
 
     function delete($id){
+        
         $users = User::find($id);
         $users->delete();
         return redirect()->route('userList');
     }
+
 
 }
